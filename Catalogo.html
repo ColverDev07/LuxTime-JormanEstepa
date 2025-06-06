@@ -1,71 +1,395 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  <!DOCTYPE html>
+  <html lang="es" class="catalogo-page">
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-</div>
+    <title>Catálogo | LuxTime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Catalogo.css">
+  </head>
+  <body class="catalogo-page">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo">LuxTime</a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+      <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html" class="active">Catálogo</a></li>
+        <li><a href="Historias.html">Historia</a></li>
+        <li><a href="Detalles.html">Detalles</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+      <label for="menu-toggle" class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+    </nav>
 
-<!-- Contenido Principal -->
-<div class="div3">
-  <section class="destacados">
-    <h2>Relojes Destacados</h2>
-    <div class="grid-relojes">
-      <!-- Maqueta de 3 relojes (puedes duplicar) -->
-      <div class="card-reloj">
-        <img src="/Assets/Img/Reloj3.png" alt="Reloj 1" />
-        <h3>RELOJ KOSMO K9005F AUTOMÁTICO ORIGINAL</h3>
-        <p>$1.250.000</p>
-        <a href="#">Ver detalles</a>
+    <!-- Filtros UI (visuales sin funcionalidad) -->
+    <section class="filtros-section">
+      <div class="container">
+        <div class="filtros-container">
+          <!-- Filtro por material -->
+          <div class="filtro-group">
+            <h3><i class="fas fa-gem"></i> Material</h3>
+            <div class="filtro-opciones">
+              <span class="filtro-option">Todos</span>
+              <span class="filtro-option">Acero</span>
+              <span class="filtro-option">Oro</span>
+              <span class="filtro-option">Cuero</span>
+              <span class="filtro-option">Titanio</span>
+              <span class="filtro-option">Cerámica</span>
+            </div>
+          </div>
+          
+          <!-- Filtro por precio -->
+          <div class="filtro-group">
+            <h3><i class="fas fa-tags"></i> Rango de Precio</h3>
+            <div class="filtro-opciones">
+              <span class="filtro-option">Todos</span>
+              <span class="filtro-option">$0 - $5,000</span>
+              <span class="filtro-option">$5,000 - $10,000</span>
+              <span class="filtro-option">$10,000 - $20,000</span>
+              <span class="filtro-option">+ $20,000</span>
+            </div>
+          </div>
+          
+          <!-- Controles de vista -->
+          <div class="vista-controls">
+            <span class="vista-btn active" aria-label="Vista de cuadrícula">
+              <i class="fas fa-th-large"></i>
+            </span>
+            <span class="vista-btn" aria-label="Vista de lista">
+              <i class="fas fa-list"></i>
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="card-reloj">
-        <img src="assets/Img/Reloj1.png" alt="Reloj 2" />
-        <h3>Modelo Moderno</h3>
-        <p>$1.600.000</p>
-        <a href="#">Ver detalles</a>
+    </section>
+
+  <!-- Productos -->
+  <section class="catalogo-productos container">
+    <!-- Todos los productos usarán la misma clase "producto-card" -->
+    <!-- Reloj 1 -->
+    <article class="producto-card">
+      <div class="producto-img">
+        <img src="/assets/img/Rolex Daytona.png" alt="Rolex Daytona">
+        <span class="stock-label">En stock</span>
       </div>
-      <div class="card-reloj">
-        <img src="assets/Img/Reloj2.png" alt="Reloj 3" />
-        <h3>Modelo Elegante</h3>
-        <p>$2.000.000</p>
-        <a href="#">Ver detalles</a>
+      <div class="producto-info">
+        <h3>Rolex Daytona</h3>
+        <div class="producto-meta">
+          <span class="producto-material"><i class="fas fa-gem"></i> Acero</span>
+          <span class="producto-precio">$28,000 USD</span>
+        </div>
+        <a href="Detalles.html" class="btn">Ver detalles</a>
       </div>
-      <div class="card-reloj">
-        <img src="assets/Img/Reloj4.png" alt="Reloj 4" />
-        <h3>Modelo Elegante</h3>
-        <p>$2.000.000</p>
-        <a href="#">Ver detalles</a>
+    </article>
+    
+    <!-- Reloj 2 -->
+    <article class="producto-card">
+      <div class="producto-img">
+        <img src="/assets/img/Patek_Philippe_Nautilus_5711-removebg-preview.png" alt="Patek Philippe" loading="lazy">
+        <span class="stock-label agotado">Agotado</span>
       </div>
-      
+      <div class="producto-info">
+        <h3>Patek Philippe</h3>
+        <div class="producto-meta">
+          <span class="producto-material"><i class="fas fa-gem"></i> Oro</span>
+          <span class="producto-precio">$120,000 USD</span>
+        </div>
+        <a href="#" class="btn">Notificar</a>
+      </div>
+    </article>
+    
+    <!-- Reloj 3 -->
+    <article class="producto-card">
+      <div class="producto-img">
+        <img src="/assets/img/venta3.avif" alt="Rolex Submariner" loading="lazy">
+        <span class="stock-label">Últimas unidades</span>
+      </div>
+      <div class="producto-info">
+        <h3>Rolex Submariner 126610LN</h3>
+        <div class="producto-meta">
+          <span class="producto-material"><i class="fas fa-gem"></i> Acero Oystersteel</span>
+          <span class="producto-precio">$15,000 USD</span>
+        </div>
+        <a href="#" class="btn">Reservar</a>
+      </div>
+    </article>
+
+        <!-- Reloj 4 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Audemars Piguet Royal Oak.png" alt="Audemars Piguet" loading="lazy">
+      <span class="stock-label agotado">Agotado</span>
     </div>
-  </section>
-
-  <section class="historia-preview">
-    <h2>Nuestra Historia</h2>
-    <p>Desde 1985, fabricando excelencia relojera...</p>
-    <a href="#">Leer más</a>
-  </section>
-
-  <section class="testimonios">
-    <h2>Testimonios</h2>
-    <div class="carrusel">
-      <blockquote>"Simplemente perfecto. El mejor reloj que he tenido." - Ana R.</blockquote>
+    <div class="producto-info">
+      <h3>Audemars Piguet Royal Oak</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Oro amarillo</span>
+        <span class="producto-precio">$52,000 USD</span>
+      </div>
+      <a href="#" class="btn">Lista de espera</a>
     </div>
-  </section>
-</div>
+  </article>
 
-<!-- Footer -->
-<div class="div4">
-  <footer class="footer">
-    <p>&copy; 2025 LuxTime. Todos los derechos reservados.</p>
-    <div class="redes">
-      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+  <!-- Reloj 5 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Omega_Speedmaster_Moonwatch-removebg-preview.png" alt="Omega Speedmaster" loading="lazy">
+      <span class="stock-label">En stock</span>
     </div>
-  </footer>
-</div>
+    <div class="producto-info">
+      <h3>Omega Speedmaster Moonwatch</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Acero</span>
+        <span class="producto-precio">$6,500 USD</span>
+      </div>
+      <a href="#" class="btn">Comprar ahora</a>
+    </div>
+  </article>
 
-</div>
-</body>
-</html>
+  <!-- Reloj 6 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Richard Mille RM 011.png" alt="Richard Mille" loading="lazy">
+      <span class="stock-label">Bajo pedido</span>
+    </div>
+    <div class="producto-info">
+      <h3>Richard Mille RM 011</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Titanio/Carbono</span>
+        <span class="producto-precio">$250,000 USD</span>
+      </div>
+      <a href="#" class="btn">Encargo especial</a>
+    </div>
+  </article>
+
+  <!-- Reloj 7 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Patek_Philippe_Nautilus_5711-removebg-preview.png" alt="Patek Philippe" loading="lazy">
+      <span class="stock-label agotado">Discontinuado</span>
+    </div>
+    <div class="producto-info">
+      <h3>Patek Philippe Nautilus 5711</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Oro/Acero</span>
+        <span class="producto-precio">$120,000 USD</span>
+      </div>
+      <a href="#" class="btn">Solo reventa</a>
+    </div>
+  </article>
+
+  <!-- Reloj 8 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Cartier_Tank_Louis-removebg-preview.png" alt="Cartier Tank" loading="lazy">
+      <span class="stock-label">Disponible</span>
+    </div>
+    <div class="producto-info">
+      <h3>Cartier Tank Louis</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Oro 18k</span>
+        <span class="producto-precio">$18,000 USD</span>
+      </div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
+  </article>
+
+  <!-- Reloj 9 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Jaeger-LeCoultre_Reverso-removebg-preview.png" alt="Jaeger-LeCoultre" loading="lazy">
+      <span class="stock-label">En stock</span>
+    </div>
+    <div class="producto-info">
+      <h3>Jaeger-LeCoultre Reverso</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Acero</span>
+        <span class="producto-precio">$7,200 USD</span>
+      </div>
+      <a href="#" class="btn">Ver detalles</a>
+    </div>
+  </article>
+
+  <!-- Reloj 10 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/IWC Portugieser.webp" alt="IWC Portugieser" loading="lazy">
+      <span class="stock-label">Última unidad</span>
+    </div>
+    <div class="producto-info">
+      <h3>IWC Portugieser</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Cuero/Acero</span>
+        <span class="producto-precio">$4,800 USD</span>
+      </div>
+      <a href="#" class="btn">Reservar</a>
+    </div>
+  </article>
+
+  <!-- Reloj 11 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Vacheron.png" alt="Vacheron Constantin" loading="lazy">
+      <span class="stock-label">Disponible</span>
+    </div>
+    <div class="producto-info">
+      <h3>Vacheron Constantin Overseas</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Acero</span>
+        <span class="producto-precio">$22,000 USD</span>
+      </div>
+      <a href="#" class="btn">Comprar</a>
+    </div>
+  </article>
+
+  <!-- Reloj 12 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Hublot_Big_Bang_Unico-removebg-preview.png" alt="Hublot Big Bang" loading="lazy">
+      <span class="stock-label">Nuevo</span>
+    </div>
+    <div class="producto-info">
+      <h3>Hublot Big Bang Unico</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Cerámica</span>
+        <span class="producto-precio">$28,000 USD</span>
+      </div>
+      <a href="#" class="btn">Ver oferta</a>
+    </div>
+  </article>
+
+  <!-- Reloj 13 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Breitling_Avenger_GMT-removebg-preview.png" alt="Breitling Avenger" loading="lazy">
+      <span class="stock-label">En stock</span>
+    </div>
+    <div class="producto-info">
+      <h3>Breitling Avenger GMT</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Titanio</span>
+        <span class="producto-precio">$5,200 USD</span>
+      </div>
+      <a href="#" class="btn">Añadir al carrito</a>
+    </div>
+  </article>
+
+  <!-- Reloj 14 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Tudor Black Bay 58.png" alt="Tudor Black Bay" loading="lazy">
+      <span class="stock-label">Últimas unidades</span>
+    </div>
+    <div class="producto-info">
+      <h3>Tudor Black Bay 58</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Acero</span>
+        <span class="producto-precio">$3,800 USD</span>
+      </div>
+      <a href="#" class="btn">Comprar ahora</a>
+    </div>
+  </article>
+
+  <!-- Reloj 15 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Omega Seamaster Diver 300M.webp" alt="Omega Seamaster" loading="lazy">
+      <span class="stock-label">Nuevo</span>
+    </div>
+    <div class="producto-info">
+      <h3>Omega Seamaster Diver 300M</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Cerámica/Acero</span>
+        <span class="producto-precio">$8,200 USD</span>
+      </div>
+      <a href="#" class="btn">Reservar</a>
+    </div>
+  </article>
+
+  <!-- Reloj 16 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Rolex_GMT-Master_II-removebg-preview.png" alt="Rolex GMT Master" loading="lazy">
+      <span class="stock-label agotado">Agotado</span>
+    </div>
+    <div class="producto-info">
+      <h3>Rolex GMT-Master II</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Oro/Acero</span>
+        <span class="producto-precio">$32,000 USD</span>
+      </div>
+      <a href="#" class="btn">Notificar disponibilidad</a>
+    </div>
+  </article>
+
+  <!-- Reloj 17 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Panerai_Luminor_Marina-removebg-preview.png" alt="Panerai Luminor" loading="lazy">
+      <span class="stock-label">Disponible</span>
+    </div>
+    <div class="producto-info">
+      <h3>Panerai Luminor Marina</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Titanio</span>
+        <span class="producto-precio">$7,500 USD</span>
+      </div>
+      <a href="#" class="btn">Ver detalles</a>
+    </div>
+  </article>
+
+  <!-- Reloj 18 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Rolex_Day-Date_1803__Vintage_1985_-removebg-preview.png" alt="Rolex Day-Date" loading="lazy">
+      <span class="stock-label">Vintage 1985</span>
+    </div>
+    <div class="producto-info">
+      <h3>Rolex Day-Date 1803</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Oro amarillo</span>
+        <span class="producto-precio">$18,500 USD</span>
+      </div>
+      <a href="#" class="btn">Certificar</a>
+    </div>
+  </article>
+
+  <!-- Reloj 19 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Omega Speedmaster '57 (Edición Limitada).png" alt="Omega Speedmaster 1957" loading="lazy">
+      <span class="stock-label">Edición limitada</span>
+    </div>
+    <div class="producto-info">
+      <h3>Omega Speedmaster '57</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Acero</span>
+        <span class="producto-precio">$35,000 USD</span>
+      </div>
+      <a href="#" class="btn">Solicitar</a>
+    </div>
+  </article>
+
+  <!-- Reloj 20 -->
+  <article class="producto-card">
+    <div class="producto-img">
+      <img src="/assets/img/Patek_Philippe_2499__Rareza_-removebg-preview.png" alt="Patek Philippe 2499" loading="lazy">
+      <span class="stock-label">Rareza</span>
+    </div>
+    <div class="producto-info">
+      <h3>Patek Philippe 2499</h3>
+      <div class="producto-meta">
+        <span class="producto-material"><i class="fas fa-gem"></i> Acero/Oro</span>
+        <span class="producto-precio">$550,000 USD</span>
+      </div>
+      <a href="#" class="btn">Subasta</a>
+    </div>
+  </article> 
+        </div>
+      </div>
+    </main>
+  </body>
+  </html>

@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" class="contacto-page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | LuxTime</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/EstilosContacto.css">
+</head>
+<body class="contacto-page">
+  <!-- Navbar -->
+  <nav class="navbar">
+    
+    <a href="index.html" class="logo">LuxTime</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <ul id="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html" class="active">Catálogo</a></li>
+        <li><a href="Historias.html">Historia</a></li>
+        <li><a href="Detalles.html">Detalles</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+    </ul>
+    <label for="menu-toggle" class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+  </nav>
 
+  <!-- Hero Section con efecto neón -->
+  <header class="contacto-hero">
+    <div class="container">
+      <h1><span class="neon-text">Contáctanos</span></h1>
+      <p class="neon-subtitle">Tu mensaje se iluminará en nuestra bandeja</p>
+      <div class="neon-line"></div>
+    </div>
+  </header>
+
+  <!-- Sección Principal -->
+  <main class="contacto-main">
+    <div class="container">
+      <div class="contacto-grid">
+        <!-- Formulario con efectos neón -->
+        <section class="formulario-section neon-box">
+          <h2 class="section-title"><span class="neon-underline">Escríbenos</span></h2>
+          
+          <form class="contacto-form">
+            <div class="form-group">
+              <label for="nombre"><i class="fas fa-user neon-icon-small"></i> Nombre completo</label>
+              <input type="text" id="nombre" required class="neon-input">
+              <div class="error-message">Por favor ingresa tu nombre</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email"><i class="fas fa-envelope neon-icon-small"></i> Correo electrónico</label>
+              <input type="email" id="email" required class="neon-input">
+              <div class="error-message">Ingresa un email válido</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="telefono"><i class="fas fa-phone neon-icon-small"></i> Teléfono</label>
+              <input type="tel" id="telefono" class="neon-input">
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje"><i class="fas fa-comment neon-icon-small"></i> Mensaje</label>
+              <textarea id="mensaje" rows="5" required class="neon-input"></textarea>
+              <div class="error-message">Por favor escribe tu mensaje</div>
+            </div>
+            
+            <button type="submit" class="btn-enviar neon-btn">
+              <span class="neon-btn-text">Enviar Mensaje</span>
+              <i class="fas fa-paper-plane neon-btn-icon"></i>
+            </button>
+          </form>
+        </section>
+        
+        <!-- Información de Contacto con efecto neón -->
+        <section class="info-contacto">
+          <h2 class="section-title"><span class="neon-underline">Conéctate</span></h2>
+          
+          <div class="contacto-card neon-card">
+            <div class="neon-card-inner">
+              <i class="fas fa-map-marker-alt neon-icon"></i>
+              <h3>Boutique Madrid</h3>
+              <p>Calle Serrano, 123<br>28001 Madrid, España</p>
+            </div>
+            <div class="neon-card-glow"></div>
+          </div>
+          
+          <div class="contacto-card neon-card">
+            <div class="neon-card-inner">
+              <i class="fas fa-phone-alt neon-icon"></i>
+              <h3>Teléfono</h3>
+              <p>+34 912 345 678</p>
+              <p>Lunes a Viernes: 10:00 - 20:00</p>
+            </div>
+            <div class="neon-card-glow"></div>
+          </div>
+          
+          <div class="contacto-card neon-card">
+            <div class="neon-card-inner">
+              <i class="fas fa-envelope neon-icon"></i>
+              <h3>Email</h3>
+              <p>contacto@luxtime.com</p>
+              <p>serviciocliente@luxtime.com</p>
+            </div>
+            <div class="neon-card-glow"></div>
+          </div>
+          
+          <div class="redes-sociales">
+            <h3 class="neon-social-title">Síguenos</h3>
+            <div class="social-icons">
+              <a href="#" aria-label="Instagram" class="neon-social-icon"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook" class="neon-social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter" class="neon-social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="YouTube" class="neon-social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="neon-footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>LuxTime</h3>
+        <p>Relojería de lujo desde 1925</p>
+      </div>
+    
+    <div class="copyright">
+      <p>&copy; 2025 LuxTime. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

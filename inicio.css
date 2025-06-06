@@ -1,68 +1,103 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
+/* Estilos base */
 body {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  display: flex;
+  box-sizing: border-box; 
+  margin: 0;              /* Reset de márgenes */
+  padding: 10px;          /* Pequeño padding para evitar pegado a bordes */
+  font-family: 'Playfair Display', serif; 
+  display: flex;          /* Flexbox para centrado fácil */
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #0a0a0a, #1a1a1a); /* Negro profundo a gris oscuro */
-  color: #f0f0f0;
-  overflow: hidden;
+  min-height: 100vh;      /* Altura completa de viewport */
+  background: linear-gradient(to right, #0a0a0a, #1a1a1a); 
+  color: #f0f0f0;      
+  border: 2px solid rgba(255, 0, 204, 0.3); /* Borde con efecto neón */
+  box-shadow:             /* Sombra exterior e interior */
+    0 0 10px rgba(255, 0, 204, 0.1),
+    0 0 20px rgba(204, 0, 255, 0.1),
+    inset 0 0 30px rgba(255, 0, 204, 0.08);
+  animation: neonBorderPulse 3s infinite ease-in-out; /* Animación al borde */
 }
 
+/* Contenedor principal */
 .container {
-  text-align: center;
-  background: rgba(40, 40, 40, 0.7);
-  padding: 40px 60px;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(255, 0, 150, 0.3); /* Sombra fucsia suave */
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  animation: fadeIn 1.5s ease-out;
+  text-align: center;     /* Centrado de contenido */
+  background: rgba(40, 40, 40, 0.7); /* Fondo semitransparente */
+  padding: 40px 60px;   
+  border-radius: 32px;    
+  backdrop-filter: blur(12px); 
+  border: 1px solid rgba(255, 0, 204, 0.4); 
+  animation:             /* Múltiples animaciones */
+    fadeIn 1.5s ease-out, 
+    neonBorderPulse 3s infinite ease-in-out;
+  box-shadow:            /* Sombra neón multicapa */
+    0 0 6px rgba(255, 0, 204, 0.2),
+    0 0 12px rgba(204, 0, 255, 0.15),
+    0 0 18px rgba(204, 0, 255, 0.1),
+    0 0 24px rgba(204, 0, 255, 0.08);
 }
+
+/* Estilos para el título principal */
 h1 {
-  font-size: 4rem;
-  margin-bottom: 10px;
-  background: linear-gradient(to right, #ff00cc, #333399); /* Fucsia a púrpura */
-  background-clip: text;              /* Estándar */
-  -webkit-background-clip: text;      /* Compatibilidad WebKit */
-  -webkit-text-fill-color: transparent;
-  animation: slideIn 1.2s ease-out;
+  font-size: 4rem;        /* Tamaño grande para impacto */
+  margin-bottom: 10px;    /* Espaciado inferior */
+  background: linear-gradient(270deg, #ff00cc, #6600ff, #00ffff, #ff00cc);
+  background-size: 600% 600%; /* Gradiente animado */
+  background-clip: text;  /* Aplica gradiente solo al texto */
+  -webkit-background-clip: text; /* Prefijo para Safari */
+  -webkit-text-fill-color: transparent; /* Texto transparente */
+  animation: rgbGradient 6s ease infinite; 
+  text-shadow:           /* Sombra de texto neón */
+    0 0 8px rgba(255, 0, 255, 0.4),
+    0 0 16px rgba(150, 0, 255, 0.3),
+    0 0 24px rgba(0, 255, 255, 0.2);
 }
 
+/* Estilos para el párrafo */
 p {
-  font-size: 1.4rem;
-  color: #ccc;
-  animation: slideIn 1.6s ease-out;
+  font-size: 1.4rem;     
+  color: #ccc;           /* Color gris claro */
+  animation: slideIn 1.6s ease-out; /* Animación de entrada */
 }
 
+/* Estilos para el botón */
 .next-page-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  color: #fff;
-  background: linear-gradient(to right, #ff00cc, #cc00ff);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(255, 0, 150, 0.4);
+  display: inline-block;  
+  margin-top: 30px;      
+  padding: 14px 28px;    
+  font-size: 1.1rem;      
+  color: #fff;           
+  background: linear-gradient(to right, #ff00cc, #cc00ff); 
+  border: none;           /* Sin borde */
+  border-radius: 30px;   
+  cursor: pointer;        /* Cambia cursor al pasar */
+  text-decoration: none;  /* Sin subrayado */
+  transition: all 0.4s ease; 
+  box-shadow:           
+    0 0 12px rgba(255, 0, 255, 0.3),
+    0 0 24px rgba(204, 0, 255, 0.2),
+    inset 0 0 8px rgba(255, 0, 255, 0.2);
+  
+ 
 }
 
+/* Efecto hover para el botón */
 .next-page-button:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 25px rgba(255, 0, 150, 0.6);
+  transform: translateY(-6px); /* Efecto de levitación */
+  box-shadow:            
+    0 0 16px rgba(255, 0, 255, 0.6),
+    0 0 32px rgba(204, 0, 255, 0.4),
+    inset 0 0 12px rgba(255, 0, 255, 0.3);
 }
 
+/* Efecto activo/presionado */
 .next-page-button:active {
-  transform: translateY(-2px);
+  transform: translateY(-2px); 
 }
 
-/* Animaciones */
+/* Animación de entrada (fade in) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -74,6 +109,7 @@ p {
   }
 }
 
+/* Animación de entrada lateral */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -85,32 +121,33 @@ p {
   }
 }
 
-/* Partículas decorativas */
-.particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  overflow: hidden;
+/* Animación de pulso neón para bordes */
+@keyframes neonBorderPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 6px rgba(255, 0, 204, 0.2),
+      0 0 12px rgba(204, 0, 255, 0.15),
+      0 0 18px rgba(204, 0, 255, 0.1),
+      0 0 24px rgba(204, 0, 255, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(255, 0, 204, 0.3),
+      0 0 20px rgba(204, 0, 255, 0.25),
+      0 0 30px rgba(204, 0, 255, 0.2),
+      0 0 40px rgba(204, 0, 255, 0.15);
+  }
 }
 
-.particulas {
-  position: absolute;
-  background: rgba(255, 0, 150, 0.2);
-  border-radius: 50%;
-  animation: floatAndFade 10s infinite ease-in-out;
-}
-
-.particulas:nth-child(1) { width: 10px; height: 10px; top: 10%; left: 20%; animation-duration: 8s; }
-.particulas:nth-child(2) { width: 14px; height: 14px; top: 30%; left: 80%; animation-duration: 11s; }
-.particulas:nth-child(3) { width: 8px; height: 8px; top: 70%; left: 40%; animation-duration: 9s; }
-.particulas:nth-child(4) { width: 12px; height: 12px; top: 50%; left: 10%; animation-duration: 10s; }
-.particulas:nth-child(5) { width: 6px; height: 6px; top: 20%; left: 60%; animation-duration: 12s; }
-
-@keyframes floatAndFade {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+/* Animación para gradiente de colores */
+@keyframes rgbGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

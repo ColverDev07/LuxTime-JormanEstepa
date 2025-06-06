@@ -2,124 +2,212 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="index.css" />
-  <title>LuxTime | Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LuxTime - Relojes de Lujo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <link rel="stylesheet" href="index.css">
 </head>
-<body>
-  <div class="parent">
+  <!-- Navegación -->
+  <nav class="navbar">
+    <a href="#inicio" class="logo">LuxTime</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <ul id="nav-menu">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="Catalogo.html">Catalogo</a></li>
+      <li><a href="#destacados">Destacados</a></li>
+      <li><a href="/Historias.html">Historia</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="/Contacto.html">Contacto</a></li>
+    </ul>
+    <label for="menu-toggle" class="mobile-menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+  </nav>
 
-    <!-- Menú lateral -->
-    <div class="div1">
-      <nav class="sidebar">
-        <h2>LuxTime</h2>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Catálogo</a></li>
-          <li><a href="#">Historia</a></li>
-          <li><a href="#">Contacto</a></li>
-        </ul>
-      </nav>
+  <!-- Banner -->
+  <header class="banner" id="inicio">
+    <div class="banner-texto">
+      <h1>Descubre la elegancia</h1>
+      <p>Relojes de lujo para cada momento</p>
+      <a href="#destacados" class="btn">Ver destacados</a>
     </div>
+  </header>
 
-    <!-- Banner rotativo -->
-    <div class="div2">
-      <header class="banner">
-        <div class="slider">
-          <div class="slide active" style="background-image: url('assets/Img/Banner.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/banner2.jpg');"></div>
-          <div class="slide" style="background-image: url('assets/banner3.jpg');"></div>
-        </div>
-        <div class="banner-texto">
-          <h1>Descubre la elegancia</h1>
-          <p>Relojes de lujo para cada momento</p>
-          <a href="#" class="btn-banner">Ver catálogo</a>
-        </div>
-      </header>
-    </div>
-
-    <!-- Contenido principal -->
-    <div class="div3">
-      <section class="destacados">
+  <!-- Destacados -->
+  <section class="carrusel-destacados section" id="destacados">
+    <div class="container">
+      <div class="section-title">
         <h2>Relojes Destacados</h2>
-        <div class="grid-relojes">
-          <!-- 6 relojes -->
-          <div class="card-reloj">
-            <img src="assets/Img/Reloj1.png" alt="Reloj 1">
-            <h3>Clásico Elegante</h3>
-            <p>$1.250.000</p>
-            <a href="#">Ver detalles</a>
+      </div>
+      
+      <input type="radio" name="carrusel" id="slide1" checked>
+      <input type="radio" name="carrusel" id="slide2">
+      <input type="radio" name="carrusel" id="slide3">
+      
+      
+      <div class="carrusel-css">
+        <div class="slides">
+          <div class="slide slide1">
+            <img src="assets/img/Reloj1.png" alt="Reloj 1" />
+            <h3>Clásico Oro</h3>
+            <p>$2,500 USD</p>
+            <a href="Catalogo.html" class="btn">Ver Catalogo</a>
           </div>
-          <div class="card-reloj">
-            <img src="assets/Img/Reloj2.png" alt="Reloj 2">
-            <h3>Moderno Premium</h3>
-            <p>$1.780.000</p>
-            <a href="#">Ver detalles</a>
+          <div class="slide slide2">
+            <img src="assets/img/Reloj2.png" alt="Reloj 2" />
+            <h3>Modelo Elegance</h3>
+            <p>$3,800 USD</p>
+            <a href="Catalogo.html" class="btn">Ver Catalogo </a>
           </div>
-          <div class="card-reloj">
-            <img src="assets/Img/Reloj3.png" alt="Reloj 3">
-            <h3>Oro 24K</h3>
-            <p>$3.500.000</p>
-            <a href="#">Ver detalles</a>
+          <div class="slide slide3">
+            <img src="assets/img/Reloj3.png" alt="Reloj 3" />
+            <h3>Acero Chrono</h3>
+            <p>$1,950 USD</p>
+            <a href="Catalogo.html" class="btn">Ver Catalogos</a>
           </div>
-          <div class="card-reloj">
-            <img src="assets/Img/Reloj4.png" alt="Reloj 4">
-            <h3>Negro Cuero</h3>
-            <p>$1.450.000</p>
-            <a href="#">Ver detalles</a>
+          <div class="slide slide3">
+            <img src="assets/img/Reloj4.png" alt="Reloj 4" />
+            <h3>Negro Elegante</h3>
+            <p>$1,950 USD</p>
+            <a href="Catalogo.html" class="btn">Ver Catalogo</a>
           </div>
-          <div class="card-reloj">
-            <img src="assets/Img/Reloj5.png" alt="Reloj 5">
-            <h3>Platinum Edition</h3>
-            <p>$2.200.000</p>
-            <a href="#">Ver detalles</a>
+          <div class="slide slide3">
+            <img src="assets/img/Reloj5.webp" alt="Reloj 5" />
+            <h3>Oro Elegante</h3>
+            <p>$2,950 USD</p>
+            <a href="Catalogo.html" class="btn">Ver Catalogo</a>
           </div>
-          <div class="card-reloj">
-            <img src="assets/Img/Reloj6.png" alt="Reloj 6">
-            <h3>Sport Chrono</h3>
-            <p>$1.100.000</p>
-            <a href="#">Ver detalles</a>
+          <div class="slide slide3">
+            <img src="assets/img/Reloj6.webp" alt="Reloj 6" />
+            <h3>Plata Elegante</h3>
+            <p>$3,950 USD</p>
+            <a href="Catalogo.html" class="btn">Ver Catalogo</a>
           </div>
         </div>
-      </section>
+      </div>
+      
+      <div class="controles">
+        <label for="slide1"></label>
+        <label for="slide2"></label>
+        <label for="slide3"></label>
+      </div>
+    </div>
+  </section>
 
-      <!-- Historia -->
-      <section class="historia-preview">
+  <!-- Historia corporativa -->
+  <section class="historia section" id="historia">
+    <div class="container">
+      <div class="historia-contenido">
         <h2>Nuestra Historia</h2>
-        <p>Desde 1985, LuxTime ha sido sinónimo de calidad, innovación y elegancia. Explora nuestra trayectoria a través de los años.</p>
-        <a href="#">Leer más sobre nuestra historia</a>
-      </section>
+        <p>Más de 25 años creando relojes únicos que fusionan tradición y modernidad. Explora nuestro recorrido por la excelencia.</p>
+        <a href="historia.html" class="btn">Ver línea del tiempo</a>
+      </div>
+    </div>
+  </section>
 
-      <!-- Testimonios -->
-      <section class="testimonios">
+  <!-- Testimonios -->
+  <section class="testimonios section" id="testimonios">
+    <div class="container">
+      <div class="section-title">
         <h2>Testimonios</h2>
+      </div>
+      
+      <input type="radio" name="testimonial" id="testimonial1" checked>
+      <input type="radio" name="testimonial" id="testimonial2">
+      <input type="radio" name="testimonial" id="testimonial3">
+      
+      <div class="testimonios-container">
         <div class="carrusel-testimonios">
-          <div class="testimonio activo">
+          <div class="testimonio">
             <blockquote>“Impresionante calidad y diseño. Totalmente recomendado.”</blockquote>
             <p>- Andrea M.</p>
           </div>
           <div class="testimonio">
-            <blockquote>“Un reloj que destaca donde vaya. Vale cada peso.”</blockquote>
-            <p>- Juan C.</p>
+            <blockquote>“Un reloj hermoso, atención impecable.”</blockquote>
+            <p>- Carlos P.</p>
           </div>
           <div class="testimonio">
-            <blockquote>“Excelente atención y productos de primera categoría.”</blockquote>
-            <p>- Laura G.</p>
+            <blockquote>“Calidad superior, atención al detalle inigualable.”</blockquote>
+            <p>- Lucía G.</p>
           </div>
         </div>
-      </section>
+      </div>
+      
+      <div class="testimonio-controls">
+        <label for="testimonial1" class="testimonio-dot active"></label>
+        <label for="testimonial2" class="testimonio-dot"></label>
+        <label for="testimonial3" class="testimonio-dot"></label>
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <div class="div4">
-      <footer class="footer">
-        <p>&copy; 2025 LuxTime. Todos los derechos reservados.</p>
-        <div class="redes">
-          <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">WhatsApp</a>
+  <!-- Contacto -->
+  <section class="contacto section" id="contacto">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contacto</h2>
+      </div>
+      
+      <div class="contacto-grid">
+        <div class="contacto-form">
+          <h3>Envíanos un mensaje</h3>
+          <form>
+            <div class="form-group">
+              <label for="nombre">Nombre completo:</label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" required />
+            </div>
+            
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Enviar</button>
+          </form>
         </div>
-      </footer>
+        
+        <div class="contacto-info">
+          <h3>Información de contacto</h3>
+          <div class="contacto-details">
+            <p><i class="fas fa-envelope"></i> contacto@luxtime.com</p>
+            <p><i class="fas fa-phone"></i> +57 322 253 1518</p>
+            <p><i class="fas fa-map-marker-alt"></i> Av. del Lujo 123, Bogotá</p>
+            <p><i class="fas fa-clock"></i> Lunes a Viernes: 9:00 - 18:00</p>
+          </div>
+          
+          <h3>Síguenos</h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Pie de página -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 LuxTime. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <a href="Inicio.html" class="btn-volver-link">
+    <button class="btn-volver-atras">
+      <i class="fas fa-arrow-left"></i> Volver
+    </button>
+  </a>
+  </button>
 </body>
 </html>
